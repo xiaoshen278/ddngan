@@ -1,0 +1,26 @@
+conda create -n ddngan python=3.7
+
+conda activate ddngan
+
+conda install cudatoolkit=11.3.1 -c conda-forge
+
+pip install torch==1.10.2+cu113 torchvision==0.11.3+cu113 torchaudio==0.10.2 -f https://download.pytorch.org/whl/torch_stable.html    
+
+
+pip install -r requirements.txt
+
+
+python train.py
+
+
+python test.py
+
+
+################################################################
+if use deformable_attention:
+    pip install mmcv-full==1.4.0 -f https://download.openmmlab.com/mmcv/dist/cu113/torch1.10.2/index.html
+else:
+    pass
+################################################################
+
+
